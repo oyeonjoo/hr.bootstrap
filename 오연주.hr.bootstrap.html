@@ -1,0 +1,103 @@
+<head>
+<title>오연주.hr.bootstrap</title>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js'></script>
+<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js'></script>
+<link rel='stylesheet' href='http://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css'/>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css'/>
+</head>
+<div class='container-fluid'>
+    <div class='row'>
+        <div class='col'>
+            <h1 class='bg-light mt-3 rounded text-center justify-content-center p-3'>HR</h1>
+        </div>
+    </div>
+
+    <div class='row'>
+        <div class='col-2'>
+            <form>
+                <input type='text' class='form-control' placeholder='노동자명'/>
+            </form>
+        </div>
+        <div class='col-4'>
+            <form>
+                <input type='text' class='form-control' placeholder='입사일'/>
+            </form>
+        </div>
+
+        <div class='col pr-0'>
+            <button type='button' class='btn btn-success btn-block'>
+                <i class='bi bi-plus'></i>
+                <span class='d-none d-sm-inline'>추가</span>
+            </button>
+        </div>
+        <div class='col pr-0 pl-1'>
+            <button type='button' class='btn btn-info btn-block'>
+                <i class='bi bi-pencil-square'></i>
+                <span class='d-none d-sm-inline'>수정</span>
+            </button>
+        </div>
+        <div class='col pl-1'>
+            <button type='button' class='btn btn-warning btn-block'
+                data-toggle='modal' data-target='#delModal'>
+                <i class='bi bi-trash-fill'></i>
+                <span class='d-none d-sm-inline'>삭제</span>
+            </button>
+        </div>
+    </div>    
+    
+    <div class='row'>
+        <div class='col'>
+            <table class='table'>
+                <thead>
+                    <tr><th></th><th>ID</th><th>이름</th><th>입사일</th></tr>
+                </thead>
+                <tbody>
+                    <form class='form-row'>
+                        <div class='col'>
+                            <tr>
+                                <td>
+                                    <div class='form-check form-check-inline'>
+                                        <input type='radio' class='form-check-input' id='id1'/>
+                                        <label class='form-check-label' for='id1'></label>
+                                    </div>
+                                </td><td>12</td><td>최한석</td><td>2025-05-15</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class='form-check form-check-inline'>
+                                        <input type='radio' class='form-check-input' id='id2'/>
+                                        <label class='form-check-label' for='id2'></label>
+                                    </div>
+                                </td><td>13</td><td>한아름</td><td>2027-07-17</td>
+                            </tr>
+                        </div>
+                    </form>
+                </tbody>
+            </table>
+        </div>
+   </div>
+</div>
+
+<div class='modal fade' id='delModal' tabindex='-1'>
+    <div class='modal-dialog'>
+        <div class='modal-content'>
+            <div class='modal-header'>
+                <button type='button' class='close' data-dismiss='modal'>
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class='modal-body'>
+                <p>노동자를 삭제하시겠습니까?</p>
+            </div>
+            <div class='modal-footer'>
+                <button type='button' class='btn btn-secondary' data-dismiss='modal'>
+                    아니오
+                </button>
+                <a href='#' class='btn btn-primary'>예</a>
+            </div>
+        </div>
+    </div>
+</div>
